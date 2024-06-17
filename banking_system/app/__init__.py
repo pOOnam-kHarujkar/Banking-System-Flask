@@ -8,6 +8,5 @@ app.config.from_object('config.Config')
 
 mongo = PyMongo(app)
 bcrypt = Bcrypt(app)
-# jwt = JWTManager(app)
 
 from app import views, models
