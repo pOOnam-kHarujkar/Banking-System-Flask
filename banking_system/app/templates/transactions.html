@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transactions</title>
+</head>
+<body>
+    <h1>All Transactions</h1>
+    <ul>
+        {% for txn in transactions %}
+            <li>User ID: {{ txn.user_id }} - {{ txn.type }} - {{ txn.amount }} - Date: {{ txn.date.strftime('%Y-%m-%d %H:%M:%S') }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

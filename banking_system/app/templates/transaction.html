@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transaction</title>
+</head>
+<body>
+    <h1>Transaction</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.amount.label }}<br>
+            {{ form.amount }}<br>
+            {% for error in form.amount.errors %}
+                <span style="color: red;">[{{ error }}]</span><br>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.transaction_type.label }}<br>
+            {{ form.transaction_type }}<br>
+            {% for error in form.transaction_type.errors %}
+                <span style="color: red;">[{{ error }}]</span><br>
+            {% endfor %}
+        </p>
+        <p><input type="submit" value="Submit"></p>
+    </form>
+    <a href="/dashboard">Back to Dashboard</a>
+</body>
+</html>
